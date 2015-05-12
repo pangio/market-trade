@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>MarketTrade</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+</head>
+<body onload="connect()" onunload="disconnect()">
+	<noscript>
+		<h2 style="color: #ff0000">Seems your browser doesn't support
+			Javascript! Websocket relies on Javascript being enabled. Please
+			enable Javascript and reload this page!</h2>
+	</noscript>
+	
+	<div id="chart_div" style="width: 900px; height: 500px;"></div>
+	<div class="row">
+	  <div class="col-md-6">
+	  	<div id="piechart_buy" style="width: 500px; height: 500px;"></div>
+	  </div>
+	  <div class="col-md-6">
+		<div id="piechart_sell" style="width: 500px; height: 500px;"></div>
+	  </div>
+	</div>
+
+	<script src="sockjs-0.3.4.js"></script>
+	<script src="stomp.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script src="cf_charts.js"></script>
+	<script src="cf_websocket_connection.js"></script>
+
+</body>
+</html>

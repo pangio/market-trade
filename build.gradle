@@ -1,0 +1,47 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+jar {
+	baseName = 'currency-fair'
+	version =  '1.0'
+}
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+	testCompile("junit:junit")
+	compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+	compile("org.springframework.boot:spring-boot-starter-websocket")
+	compile("org.springframework:spring-messaging")
+	compile("org.springframework.boot:spring-boot-starter-data-rest")
+    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+	compile("org.apache.logging.log4j:log4j-core:2.2")
+	
+	// Testing
+	compile("org.hsqldb:hsqldb:2.3.2")
+	compile("org.springframework.boot:spring-boot-starter-test")
+	compile('com.jayway.restassured:rest-assured:2.3.2')
+	compile('org.hamcrest:hamcrest-core:1.3')
+	compile('com.jayway.jsonpath:json-path:0.9.1')
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.3'
+}
+

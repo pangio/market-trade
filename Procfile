@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT -jar target/currency-fair-1.0.jar

@@ -39,7 +39,7 @@ The front-end draws the Charts built with Google Visualization API to display da
 * gradle 2.3 - visit [gradle.org](https://gradle.org/)
 
 # Setup
-* Clone the repo ```https://github.com/pangio/market-trade```
+* Clone the repo ```git clone https://github.com/pangio/market-trade.git```
 * Build ```./gradlew clean compile```
 * Run  ```./gradlew bootRun```
 
